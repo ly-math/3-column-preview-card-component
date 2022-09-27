@@ -1,0 +1,140 @@
+/* font-family: 'Big Shoulders Display', cursive;
+font-family: 'Lexend Deca', sans-serif; */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lexend Deca', sans-serif;
+}
+
+body {
+    background-color: var(--Very-light-gray) ;
+    font-size: 0.9375rem;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+:root {
+    --Bright-orange: hsl(31, 77%, 52%);
+    --Dark-cyan: hsl(184, 100%, 22%);
+    --Very-dark-cyan: hsl(179, 100%, 13%);
+
+    /* (paragraph) */
+    --Trans-white: hsla(0, 0%, 100%, 0.75);
+
+    /* (background, headings, buttons) */
+    --Very-light-gray: hsl(0, 0%, 95%);
+}
+
+.container {
+    width: 65rem;
+    border-radius: 50px;
+    margin: 0 auto;
+}
+
+.grid {
+    display: flex;
+    flex-direction: row;
+    min-height: 35rem;
+}
+
+.article-1, .article-2, .article-3 {
+    padding: 3.5rem;
+}
+
+.article-1 {
+    background-color: var(--Bright-orange) ;
+    border-radius: 10px 0 0 10px;
+}
+
+.header h1 {
+    font-family: 'Big Shoulders Display', cursive;
+    font-weight: 700;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    color: var(--Very-light-gray);
+    margin: 2rem 0;
+}
+
+.text p {
+    color: var(--Trans-white);
+    margin-bottom: 10rem;
+    font-weight: 400;
+    padding-right: 1.65rem;
+    line-height: 2rem;
+}
+
+.button span {
+    background-color: var(--Very-light-gray);
+    border: 2px solid var(--Very-light-gray);
+    border-radius: 30px;
+    padding: 0.8rem 2rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.button span:hover {
+    color: var(--Trans-white) !important;
+    background-color: transparent;
+}
+
+.article-1 .button span {
+    color: var(--Bright-orange);
+}
+.article-2 .button span {
+    color: var(--Dark-cyan);
+}
+.article-2 .button span {
+    color: var(--Very-dark-cyan);
+}
+
+.article-2 {
+    background-color: var(--Dark-cyan);
+}
+
+.article-3 {
+    background-color: var(--Very-dark-cyan);
+    border-radius: 0 10px 10px 0;
+}
+
+@media only screen and (max-width: 900px) {
+
+    .grid {
+        display: flex;
+        flex-direction: column;
+        width: 19rem;
+        height: auto;
+        margin: 3rem auto;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .article-1, .article-2, .article-3 {
+        padding: 1.7rem;
+    }
+    
+    .header h1 {
+        margin: 0;
+        padding: 1rem 0;
+    }
+
+    .text p {
+        margin: 0rem;
+        line-height: 1.5rem;
+        padding-bottom: 2rem;
+    }
+
+    .button {
+        padding-bottom: 1rem;
+    }
+
+    .article-1 {
+        border-radius: 10px 10px 0 0;
+    }
+    .article-3 {
+        border-radius: 0 0 10px 10px;
+    }
+}
